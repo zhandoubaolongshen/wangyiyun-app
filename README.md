@@ -1,5 +1,5 @@
 # wangyiyun-app
-
+后端为开源的网易云音乐node.js版
 ## Project setup
 ```
 npm install
