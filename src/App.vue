@@ -2,7 +2,7 @@
   <div>
   <router-view/>
   <FooterMusic v-show="$store.state.isFooterMusic"/>
-  <BottomNav v-show="!$store.state.detailShow"/>
+  <BottomNav v-show="!$store.state.detailShow && $store.state.isFooterMusic"/>
   </div>
 </template>
 <script>

@@ -18,7 +18,7 @@
     <div class="bord1">
         <div class="iconList">
         <div  class="iconItem">
-        <svg  class="icon" aria-hidden="true">
+        <svg  class="icon" aria-hidden="true" @click="$router.push('/recentmusic')">
           <use xlink:href="#icon-zuijinbofang"></use>
         </svg>
         <span>最近播放</span>

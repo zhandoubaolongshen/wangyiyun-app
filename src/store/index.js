@@ -40,15 +40,30 @@ export default createStore({
       state.isbtnShow = value
     },
     pushPlayList:function(state,value){
-      state.playList.push(value)
+      // if (!state.playList.includes(value)) {
+      //   state.playList.push(value);
+      // }
+      // console.log("palylist**",state.playList)
+
+      for(let i=0;i<state.playList.length;i++){
+        if(state.playList[i]==value){
+          console.log("重复播放列表中的歌曲")
+          state.playList.splice(i, 1);
+          state.playList.push(value)
+          return 0
+        }
+      }
+      state.playList.push(value);
       console.log("palylist**",state.playList)
     },
     updatePlayList: function (state, value) {
       state.playList = value
       console.log(state.playList);
     },
-    updatePlayListIndex: function (state, value) {
+    updatePlayListIndex: function (state, value) {//切换不播放
       state.playListIndex = value
+      //state.isbtnShow = false
+      //console.log("切换歌曲下标")
     },
     updateDetailShow: function (state) {
       state.detailShow = !state.detailShow

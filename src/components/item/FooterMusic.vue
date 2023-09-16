@@ -67,6 +67,7 @@ export default {
   updated() {
     this.$store.dispatch("getLyric", this.playList[this.playListIndex].id);
     this.addDuration()
+    console.log("updated触发了")
   },
   methods: {
     play: function () {
